@@ -1,0 +1,237 @@
+﻿/* ===== Bold Navy Theme ===== */
+:root {
+    --navy-dark: #0a1128;
+    --navy-mid: #14213d;
+    --accent-blue: #2e6ff2;
+    --accent-blue-light: #4d8dff;
+    --text-light: #f4f6fb;
+    --text-muted: #b8c2d9;
+}
+
+body {
+    background-color: var(--navy-dark);
+    color: var(--text-light);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Navbar override */
+.navbar-inverse {
+    background-color: var(--navy-mid);
+    border: none;
+}
+
+    .navbar-inverse .navbar-brand,
+    .navbar-inverse .navbar-nav > li > a {
+        color: var(--text-light) !important;
+    }
+
+        .navbar-inverse .navbar-nav > li > a:hover {
+            color: var(--accent-blue-light) !important;
+        }
+
+/* Hero section */
+.hero {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-mid) 60%, var(--accent-blue) 150%);
+    padding: 100px 20px;
+    text-align: center;
+    border-radius: 0 0 30px 30px;
+    margin-bottom: 40px;
+}
+
+    .hero h1 {
+        font-size: 48px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        color: #ffffff;
+    }
+
+    .hero p.lead {
+        font-size: 20px;
+        color: var(--text-muted);
+        max-width: 600px;
+        margin: 0 auto 30px auto;
+    }
+
+/* Buttons */
+.btn-accent {
+    background-color: var(--accent-blue);
+    color: #fff;
+    border: none;
+    padding: 12px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    margin: 0 8px;
+    transition: 0.2s ease;
+}
+
+    .btn-accent:hover {
+        background-color: var(--accent-blue-light);
+        color: #fff;
+    }
+
+.btn-outline-accent {
+    background-color: transparent;
+    color: var(--accent-blue-light);
+    border: 2px solid var(--accent-blue-light);
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    margin: 0 8px;
+    transition: 0.2s ease;
+}
+
+    .btn-outline-accent:hover {
+        background-color: var(--accent-blue-light);
+        color: var(--navy-dark);
+    }
+
+/* About section */
+.about-section {
+    max-width: 750px;
+    margin: 0 auto 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+    .about-section h2 {
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+
+    .about-section p {
+        color: var(--text-muted);
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+/* Footer tweak */
+footer {
+    color: var(--text-muted);
+}
+
+/* ===== Login Page ===== */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.login-card {
+    background-color: var(--navy-mid);
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+    .login-card h2 {
+        color: #ffffff;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+.login-subtext {
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+.login-error {
+    background-color: #4a1b1b;
+    color: #ff9c9c;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.form-group-custom {
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+    .form-group-custom label {
+        display: block;
+        color: var(--text-muted);
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+.form-control-custom {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid #2a3557;
+    background-color: var(--navy-dark);
+    color: var(--text-light);
+    font-size: 15px;
+}
+
+    .form-control-custom:focus {
+        outline: none;
+        border-color: var(--accent-blue-light);
+    }
+
+.btn-block-custom {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.login-footer {
+    margin-top: 20px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+    .login-footer a {
+        color: var(--accent-blue-light);
+    }
+
+/* ===== Dashboard Pages ===== */
+.dashboard-header {
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+}
+
+    .dashboard-header h1 {
+        color: #ffffff;
+        font-weight: 700;
+    }
+
+    .dashboard-header p {
+        color: var(--text-muted);
+        font-size: 16px;
+    }
+
+.dashboard-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.dash-card {
+    background-color: var(--navy-mid);
+    border-radius: 10px;
+    padding: 25px;
+    width: 260px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+    .dash-card h3 {
+        color: var(--accent-blue-light);
+        margin-bottom: 10px;
+    }
+
+    .dash-card p {
+        color: var(--text-muted);
+        font-size: 14px;
+    }
