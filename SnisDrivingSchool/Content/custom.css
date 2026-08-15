@@ -235,3 +235,111 @@ footer {
         color: var(--text-muted);
         font-size: 14px;
     }
+
+/* ===== Manager Dashboard ===== */
+.manager-header {
+    padding: 30px 20px 10px 20px;
+}
+
+    .manager-header h2 {
+        color: #ffffff;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    .manager-header p {
+        color: var(--text-muted);
+        font-size: 15px;
+    }
+
+.manager-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 20px 25px 20px;
+}
+
+    .manager-nav a {
+        display: inline-block;
+        padding: 10px 22px;
+        border-radius: 6px;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        border: 2px solid var(--accent-blue-light);
+        color: var(--accent-blue-light);
+        background-color: transparent;
+        transition: 0.2s ease;
+    }
+
+        .manager-nav a:hover {
+            background-color: var(--accent-blue-light);
+            color: var(--navy-dark);
+            text-decoration: none;
+        }
+
+        .manager-nav a.active {
+            background-color: var(--accent-blue);
+            border-color: var(--accent-blue);
+            color: #fff;
+        }
+
+.manager-panel {
+    background-color: var(--navy-mid);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 0 20px 40px 20px;
+}
+
+.manager-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+    .manager-panel-header h3 {
+        color: #ffffff;
+        font-weight: 700;
+        margin: 0;
+    }
+
+.table-placeholder {
+    border: 2px dashed var(--accent-blue);
+    border-radius: 8px;
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 15px;
+    background-color: var(--navy-dark);
+}
+
+.modal-content-custom {
+    background-color: var(--navy-mid);
+    color: var(--text-light);
+    border-radius: 10px;
+    border: none;
+}
+
+    .modal-content-custom .modal-header {
+        border-bottom: 1px solid #2a3557;
+    }
+
+    .modal-content-custom .modal-footer {
+        border-top: 1px solid #2a3557;
+    }
+
+    .modal-content-custom .close {
+        color: var(--text-light);
+        opacity: 0.7;
+    }
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+    .search-bar input {
+        max-width: 400px;
+    }

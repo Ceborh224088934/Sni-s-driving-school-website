@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Manager - Vehicles";
+    ViewBag.Active = "Vehicles";
+}
+<div class="manager-header">
+    <h2>Manager dashboard</h2>
+    <p>Manage the driving school's vehicle fleet.</p>
+</div>
+
+@Html.Partial("_ManagerNav")
+
+<div class="manager-panel">
+    <div class="manager-panel-header">
+        <h3>Vehicles</h3>
+        <button type="button" class="btn-accent">+ Add vehicle</button>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" class="form-control-custom" placeholder="Search..." />
+    </div>
+
+    <div class="table-placeholder">
+        Vehicles table will go here (make, model, registration, assigned instructor, status).
+    </div>
+</div>

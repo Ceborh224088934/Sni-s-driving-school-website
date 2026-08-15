@@ -1,0 +1,11 @@
+﻿@{
+    string active = ViewBag.Active as string ?? "";
+}
+<div class="manager-nav">
+    @Html.ActionLink("Bookings", "Bookings", "Manager", null, new { @class = active == "Bookings" ? "active" : "" })
+    @Html.ActionLink("Students", "Students", "Manager", null, new { @class = active == "Students" ? "active" : "" })
+    @Html.ActionLink("Staff", "Staff", "Manager", null, new { @class = active == "Staff" ? "active" : "" })
+    @Html.ActionLink("Instructors", "Instructors", "Manager", null, new { @class = active == "Instructors" ? "active" : "" })
+    @Html.ActionLink("Vehicles", "Vehicles", "Manager", null, new { @class = active == "Vehicles" ? "active" : "" })
+    @Html.ActionLink("Reports", "Reports", "Manager", null, new { @class = active == "Reports" ? "active" : "" })
+</div>

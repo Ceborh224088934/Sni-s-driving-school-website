@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Manager - Instructors";
+    ViewBag.Active = "Instructors";
+}
+<div class="manager-header">
+    <h2>Manager dashboard</h2>
+    <p>Manage driving instructors and their schedules.</p>
+</div>
+
+
+
+@Html.Partial("_ManagerNav")
+
+<div class="manager-panel">
+    <div class="manager-panel-header">
+        <h3>Instructors</h3>
+        <button type="button" class="btn-accent">+ Add instructor</button>
+    </div>
+    <<div class="search-bar">
+        <input type="text" class="form-control-custom" placeholder="Search staff by name, email, or role" />
+    </div>
+
+    <div class="table-placeholder">
+        Instructors table will go here (name, contact details, availability, assigned vehicle).
+    </div>
+</div>
