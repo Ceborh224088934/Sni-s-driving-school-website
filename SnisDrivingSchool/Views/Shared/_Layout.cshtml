@@ -19,6 +19,9 @@
                 @Html.ActionLink("Sni's Driving School", "Index", "Home", null, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                </ul>
                 <ul class="nav navbar-nav navbar-right">
                     @if (Session["Role"] != null)
                     {
@@ -33,7 +36,6 @@
             </div>
         </div>
     </nav>
-
     <div class="container body-content" style="padding-top: 80px;">
         @RenderBody()
         <hr />
@@ -41,7 +43,6 @@
             <p>&copy; @DateTime.Now.Year - Sni's Driving School</p>
         </footer>
     </div>
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
