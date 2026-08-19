@@ -7,20 +7,56 @@
     <p>Manage driving instructors and their schedules.</p>
 </div>
 
-
-
 @Html.Partial("_ManagerNav")
 
 <div class="manager-panel">
     <div class="manager-panel-header">
         <h3>Instructors</h3>
-        <button type="button" class="btn-accent">+ Add instructor</button>
+        <button type="button" class="btn-accent" data-toggle="modal" data-target="#addInstructorModal">+ Add instructor</button>
     </div>
-    <<div class="search-bar">
-        <input type="text" class="form-control-custom" placeholder="Search staff by name, email, or role" />
+
+    <div class="search-bar">
+        <input type="text" class="form-control-custom" placeholder="Search instructors by name, email, or availability" />
     </div>
 
     <div class="table-placeholder">
         Instructors table will go here (name, contact details, availability, assigned vehicle).
+    </div>
+</div>
+
+<!-- Add Instructor Modal -->
+<div class="modal fade" id="addInstructorModal" tabindex="-1" role="dialog" aria-labelledby="addInstructorModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal-content-custom">
+            @using (Html.BeginForm("AddInstructor", "Manager", FormMethod.Post))
+            {
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="addInstructorModalLabel">Add instructor</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group-custom">
+                        <label>Full name</label>
+                        <input type="text" name="FullName" class="form-control-custom" placeholder="Enter full name" />
+                    </div>
+                    <div class="form-group-custom">
+                        <label>Email</label>
+                        <input type="email" name="Email" class="form-control-custom" placeholder="Enter email address" />
+                    </div>
+                    <div class="form-group-custom">
+                        <label>Phone number</label>
+                        <input type="text" name="Phone" class="form-control-custom" placeholder="Enter phone number" />
+                    </div>
+                    <div class="form-group-custom">
+                        <label>Assigned vehicle</label>
+                        <input type="text" name="AssignedVehicle" class="form-control-custom" placeholder="Enter vehicle registration (optional)" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-outline-accent" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn-accent">Save instructor</button>
+                </div>
+            }
+        </div>
     </div>
 </div>

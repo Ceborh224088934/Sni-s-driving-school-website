@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Instructor - Students";
+    ViewBag.Active = "Students";
+}
+<div class="manager-header">
+    <h2>Instructor dashboard</h2>
+    <p>View the students currently assigned to you.</p>
+</div>
+
+@Html.Partial("_InstructorNav")
+
+<div class="manager-panel">
+    <div class="manager-panel-header">
+        <h3>My Students</h3>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" class="form-control-custom" placeholder="Search students by name or phone" />
+    </div>
+
+    <div class="table-placeholder">
+        Assigned students table will go here (name, contact details, lessons completed, progress notes).
+    </div>
+</div>

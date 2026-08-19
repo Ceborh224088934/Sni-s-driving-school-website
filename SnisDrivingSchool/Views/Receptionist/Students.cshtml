@@ -1,44 +1,39 @@
 ﻿@{
-    ViewBag.Title = "Manager - Staff";
-    ViewBag.Active = "Staff";
+    ViewBag.Title = "Receptionist - Students";
+    ViewBag.Active = "Students";
 }
 <div class="manager-header">
-    <h2>Manager dashboard</h2>
-    <p>Manage staff members and register new employees.</p>
+    <h2>Receptionist dashboard</h2>
+    <p>View registered students and register new ones.</p>
 </div>
 
-@Html.Partial("_ManagerNav")
+@Html.Partial("_ReceptionistNav")
 
 <div class="manager-panel">
     <div class="manager-panel-header">
-        <h3>Staff</h3>
-        <button type="button" class="btn-accent" data-toggle="modal" data-target="#addStaffModal">+ Add staff</button>
+        <h3>Students</h3>
+        <button type="button" class="btn-accent" data-toggle="modal" data-target="#addStudentModal">+ Add student</button>
     </div>
 
     <div class="search-bar">
-        <input type="text" class="form-control-custom" placeholder="Search staff by name, email, or role" />
+        <input type="text" class="form-control-custom" placeholder="Search students by name, email, or phone" />
     </div>
 
     <div class="table-placeholder">
-        Staff table will go here (name, role, contact details, status).
+        Students table will go here (name, contact details, ID number, registered lessons).
     </div>
 </div>
 
-<!-- Add Staff Modal -->
-<div class="modal fade" id="addStaffModal" tabindex="-1" role="dialog" aria-labelledby="addStaffModalLabel">
+<!-- Add Student Modal -->
+<div class="modal fade" id="addStudentModal" tabindex="-1" role="dialog" aria-labelledby="addStudentModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content modal-content-custom">
-            @using (Html.BeginForm("AddStaff", "Manager", FormMethod.Post))
+            @using (Html.BeginForm("AddStudent", "Receptionist", FormMethod.Post))
             {
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="addStaffModalLabel">Register new staff</h4>
+                    <h4 class="modal-title" id="addStudentModalLabel">Register new student</h4>
                 </div>
-
-                
-
-                
-
                 <div class="modal-body">
                     <div class="form-group-custom">
                         <label>Full name</label>
@@ -53,17 +48,13 @@
                         <input type="text" name="Phone" class="form-control-custom" placeholder="Enter phone number" />
                     </div>
                     <div class="form-group-custom">
-                        <label>Role</label>
-                        <select name="Role" class="form-control-custom">
-                            <option value="Receptionist">Receptionist</option>
-                            <option value="AdminStaff">Admin staff</option>
-                            <option value="Instructor">Instructor</option>
-                        </select>
+                        <label>ID number</label>
+                        <input type="text" name="IdNumber" class="form-control-custom" placeholder="Enter ID number" />
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn-outline-accent" data-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn-accent">Save staff member</button>
+                    <button type="submit" class="btn-accent">Save student</button>
                 </div>
             }
         </div>

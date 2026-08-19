@@ -1,13 +1,13 @@
 ﻿@{
-    ViewBag.Title = "Manager - Reports";
+    ViewBag.Title = "Admin - Reports";
     ViewBag.Active = "Reports";
 }
 <div class="manager-header">
-    <h2>Manager dashboard</h2>
+    <h2>Admin dashboard</h2>
     <p>Review activity across the school and export reports.</p>
 </div>
 
-@Html.Partial("_ManagerNav")
+@Html.Partial("_AdminStaffNav")
 
 <div class="manager-panel">
     <div class="manager-panel-header">
@@ -21,6 +21,6 @@
     </div>
 
     <div class="table-placeholder">
-        Report data will go here (bookings completed, revenue, instructor hours, pass rates).
+        Report data will go here (new registrations, staff activity, attendance).
     </div>
 </div>

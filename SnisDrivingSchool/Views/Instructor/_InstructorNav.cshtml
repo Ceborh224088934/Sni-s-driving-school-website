@@ -1,0 +1,7 @@
+﻿@{
+    string active = ViewBag.Active as string ?? "";
+}
+<div class="manager-nav">
+    @Html.ActionLink("Schedule", "Schedule", "Instructor", null, new { @class = active == "Schedule" ? "active" : "" })
+    @Html.ActionLink("Students", "Students", "Instructor", null, new { @class = active == "Students" ? "active" : "" })
+</div>

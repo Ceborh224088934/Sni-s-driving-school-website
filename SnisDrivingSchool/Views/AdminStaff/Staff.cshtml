@@ -1,13 +1,13 @@
 ﻿@{
-    ViewBag.Title = "Manager - Staff";
+    ViewBag.Title = "Admin - Staff";
     ViewBag.Active = "Staff";
 }
 <div class="manager-header">
-    <h2>Manager dashboard</h2>
+    <h2>Admin dashboard</h2>
     <p>Manage staff members and register new employees.</p>
 </div>
 
-@Html.Partial("_ManagerNav")
+@Html.Partial("_AdminStaffNav")
 
 <div class="manager-panel">
     <div class="manager-panel-header">
@@ -28,17 +28,12 @@
 <div class="modal fade" id="addStaffModal" tabindex="-1" role="dialog" aria-labelledby="addStaffModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content modal-content-custom">
-            @using (Html.BeginForm("AddStaff", "Manager", FormMethod.Post))
+            @using (Html.BeginForm("AddStaff", "AdminStaff", FormMethod.Post))
             {
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="addStaffModalLabel">Register new staff</h4>
                 </div>
-
-                
-
-                
-
                 <div class="modal-body">
                     <div class="form-group-custom">
                         <label>Full name</label>

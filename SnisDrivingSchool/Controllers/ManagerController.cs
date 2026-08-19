@@ -94,5 +94,25 @@ namespace SnisDrivingSchool.Controllers
             // TODO: persist new booking once the database layer is wired up.
             return RedirectToAction("Bookings");
         }
+
+        [HttpPost]
+        public ActionResult AddInstructor(string FullName, string Email, string Phone, string AssignedVehicle)
+        {
+            if (!IsManager())
+                return RedirectToAction("Login", "Account");
+
+            // TODO: persist new instructor once the database layer is wired up.
+            return RedirectToAction("Instructors");
+        }
+
+        [HttpPost]
+        public ActionResult AddVehicle(string Make, string Model, string Registration, string AssignedInstructor)
+        {
+            if (!IsManager())
+                return RedirectToAction("Login", "Account");
+
+            // TODO: persist new vehicle once the database layer is wired up.
+            return RedirectToAction("Vehicles");
+        }
     }
 }

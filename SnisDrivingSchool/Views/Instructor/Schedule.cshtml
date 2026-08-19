@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Instructor - Schedule";
+    ViewBag.Active = "Schedule";
+}
+<div class="manager-header">
+    <h2>Instructor dashboard</h2>
+    <p>View your upcoming lessons and set your availability.</p>
+</div>
+
+@Html.Partial("_InstructorNav")
+
+<div class="manager-panel">
+    <div class="manager-panel-header">
+        <h3>Schedule</h3>
+        <button type="button" class="btn-accent" data-toggle="modal" data-target="#addAvailabilityModal">+ Set availability</button>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" class="form-control-custom" placeholder="Search lessons by student or date" />
+    </div>
+
+    <div class="table-placeholder">
+        Schedule table will go here (date, time, student, pickup location, status).
+    </div>
+</div>
+
+<!-- Set Availability Modal -->
+<div class="modal fade" id="addAvailabilityModal" tabindex="-1" role="dialog" aria-labelledby="addAvailabilityModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal-content-custom">
+            @using (Html.BeginForm("AddAvailability", "Instructor", FormMethod.Post))
+            {
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="addAvailabilityModalLabel">Set availability</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group-custom">
+                        <label>Date</label>
+                        <input type="date" name="AvailableDate" class="form-control-custom" />
+                    </div>
+                    <div class="form-group-custom">
+                        <label>Start time</label>
+                        <input type="time" name="StartTime" class="form-control-custom" />
+                    </div>
+                    <div class="form-group-custom">
+                        <label>End time</label>
+                        <input type="time" name="EndTime" class="form-control-custom" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-outline-accent" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn-accent">Save availability</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
