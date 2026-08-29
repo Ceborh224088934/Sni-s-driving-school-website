@@ -22,9 +22,20 @@ namespace SnisDrivingSchool.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Success= "Your contact page.";
 
             return View();
+        }
+        [HttpPost]
+        public ActionResult Contact(ContactViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                // TODO: save to database or send an email here
+                ViewBag.Success = "Thank you! Your message has been sent — we'll be in touch soon.";
+                ModelState.Clear();
+            }
+            return View(model);
         }
     }
 }

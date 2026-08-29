@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Student Dashboard";
+}
+
+<h2>Student Dashboard</h2>
+<p>Welcome, @Session["Username"]! Manage your driving lessons below.</p>
+
+<div class="row" style="margin-top:30px;">
+    <div class="col-md-4" style="margin-bottom:20px;">
+        <div class="panel panel-default">
+            <div class="panel-body text-center">
+                <h4>My Profile</h4>
+                <p>View and update your personal details.</p>
+                @Html.ActionLink("View Profile", "Profile", "Student", null, new { @class = "btn btn-primary" })
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4" style="margin-bottom:20px;">
+        <div class="panel panel-default">
+            <div class="panel-body text-center">
+                <h4>My Bookings</h4>
+                <p>Check your upcoming or past lesson bookings.</p>
+                @Html.ActionLink("View Bookings", "Bookings", "Student", null, new { @class = "btn btn-primary" })
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4" style="margin-bottom:20px;">
+        <div class="panel panel-default">
+            <div class="panel-body text-center">
+                <h4>Book a Lesson</h4>
+                <p>Schedule a new driving lesson.</p>
+                @Html.ActionLink("Book Now", "Book", "Booking", null, new { @class = "btn btn-primary" })
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4" style="margin-bottom:20px;">
+        <div class="panel panel-default">
+            <div class="panel-body text-center">
+                <h4>Rate &amp; Review</h4>
+                <p>Share feedback on your instructor or lesson.</p>
+                @Html.ActionLink("Leave a Review", "RateAndReviews", "Student", null, new { @class = "btn btn-primary" })
+            </div>
+        </div>
+    </div>
+</div>

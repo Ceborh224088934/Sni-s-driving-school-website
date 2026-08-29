@@ -5,10 +5,12 @@ namespace SnisDrivingSchool.Controllers
     public class AccountController : Controller
     {
         // GET: Account/Login
-        public ActionResult Login()
+        public ActionResult Login(string role)
         {
+            ViewBag.Role = role;
             return View();
         }
+
 
         // POST: Account/Login
         [HttpPost]
@@ -42,9 +44,7 @@ namespace SnisDrivingSchool.Controllers
                 case "student":
                     Session["Role"] = "Student";
                     return RedirectToAction("Index", "Student");
-                case "adminstaff":
-                    Session["Role"] = "AdminStaff";
-                    return RedirectToAction("Index", "AdminStaff");
+                
                 default:
                     ViewBag.Error = "Invalid username or password.";
                     return View();
@@ -62,5 +62,6 @@ namespace SnisDrivingSchool.Controllers
             Session.Clear();
             return RedirectToAction("Index", "Home");
         }
+
     }
 }
