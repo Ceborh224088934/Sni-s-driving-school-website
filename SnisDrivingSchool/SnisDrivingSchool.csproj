@@ -169,9 +169,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Manager\Index.cshtml" />
-    <Content Include="Views\Instructor\Index.cshtml" />
-    <Content Include="Views\Receptionist\Index.cshtml" />
-    <Content Include="Views\AdminStaff\Index.cshtml" />
     <Content Include="Views\Manager\_ManagerNav.cshtml" />
     <Content Include="Views\Manager\Bookings.cshtml" />
     <Content Include="Views\Manager\Staff.cshtml" />
@@ -179,11 +176,24 @@
     <Content Include="Views\Manager\Vehicles.cshtml" />
     <Content Include="Views\Manager\Reports.cshtml" />
     <Content Include="Views\Manager\Students.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Student\Index.cshtml" />
     <Content Include="Views\Student\Profile.cshtml" />
     <Content Include="Views\Student\Bookings.cshtml" />
     <Content Include="Views\Student\RateAndReviews.cshtml" />
     <Content Include="Views\Contact.cshtml" />
+=======
+    <Content Include="Views\Receptionist\_ReceptionistNav.cshtml" />
+    <Content Include="Views\Receptionist\Bookings.cshtml" />
+    <Content Include="Views\Receptionist\Students.cshtml" />
+    <Content Include="Views\AdminStaff\_AdminStaffNav.cshtml" />
+    <Content Include="Views\AdminStaff\Staff.cshtml" />
+    <Content Include="Views\AdminStaff\Students.cshtml" />
+    <Content Include="Views\AdminStaff\Reports.cshtml" />
+    <Content Include="Views\Instructor\_InstructorNav.cshtml" />
+    <Content Include="Views\Instructor\Schedule.cshtml" />
+    <Content Include="Views\Instructor\Students.cshtml" />
+>>>>>>> 08a7492ea01c443c9196507ac6085801662d4515
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
