@@ -1,17 +1,90 @@
-﻿@{
-    ViewBag.Title = "Contact";
+﻿@model SnisDrivingSchool.Models.ContactViewModel
+@{
+    ViewBag.Title = "Contact Us";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<div class="page-header-block">
+    <h1>Contact Us</h1>
+    <p>Questions about lessons, pricing, or booking? We'd love to hear from you.</p>
+</div>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<div class="contact-layout">
+    <div class="contact-info">
+        <h2>Get In Touch</h2>
+
+        <div class="contact-info-item">
+            <strong>Address</strong>
+            <p>
+                45 Rivonia Road<br />
+                Sandton, Johannesburg, 2196
+            </p>
+        </div>
+
+        <div class="contact-info-item">
+            <strong>Phone</strong>
+            <p><a href="tel:+27115550143">011 555 0143</a></p>
+        </div>
+
+        <div class="contact-info-item">
+            <strong>Email</strong>
+            <p>
+                <a href="mailto:info@snisdrivingschool.co.za">info@snisdrivingschool.co.za</a><br />
+                <a href="mailto:bookings@snisdrivingschool.co.za">bookings@snisdrivingschool.co.za</a>
+            </p>
+        </div>
+
+        <div class="contact-info-item">
+            <strong>Opening Hours</strong>
+            <p>
+                Monday – Friday: 07:00 – 18:00<br />
+                Saturday: 08:00 – 14:00<br />
+                Sunday: Closed
+            </p>
+        </div>
+    </div>
+
+    <div class="contact-form-wrapper">
+        @if (!string.IsNullOrEmpty(ViewBag.Success as string) && ViewBag.Success.ToString().StartsWith("Thank you"))
+        {
+            <div class="contact-success-message">
+                @ViewBag.Success
+            </div>
+        }
+
+        @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(false, "", new { @class = "contact-validation-summary" })
+
+            <div class="form-group-custom">
+                @Html.LabelFor(m => m.Name)
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control-custom" })
+            </div>
+
+            <div class="form-group-custom">
+                @Html.LabelFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control-custom" })
+            </div>
+
+            <div class="form-group-custom">
+                @Html.LabelFor(m => m.Subject)
+                @Html.TextBoxFor(m => m.Subject, new { @class = "form-control-custom" })
+            </div>
+
+            <div class="form-group-custom">
+                @Html.LabelFor(m => m.Message)
+                @Html.TextAreaFor(m => m.Message, new { @class = "form-control-custom", rows = "5" })
+            </div>
+
+            <button type="submit" class="btn-accent btn-block-custom">Send Message</button>
+        }
+    </div>
+</div>
+
+<div class="map-embed">
+    <iframe
+        title="Sni's Driving School location"
+        src="https://www.google.com/maps?q=Sandton%2C+Johannesburg&output=embed"
+        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+</div>

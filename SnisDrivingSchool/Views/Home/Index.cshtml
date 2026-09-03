@@ -2,19 +2,131 @@
     ViewBag.Title = "Home";
 }
 
-<div class="hero">
-    <h1>Sni's Driving School</h1>
-    <p class="lead">Learn to drive with confidence. Professional instructors, flexible bookings, real results.</p>
-    <a href="@Url.Action("Login", "Account")" class="btn-accent">Log In</a>
-    <a href="@Url.Action("Register", "Account")" class="btn-outline-accent">Register</a>
+<div class="hero hero-with-image">
+    <div class="hero-overlay">
+        <h1>Sni's Driving School</h1>
+        <p class="lead">Learn to drive with confidence. Professional instructors, flexible bookings, real results.</p>
+        <a href="@Url.Action("Login", "Account")" class="btn-accent">Book a Lesson</a>
+        <a href="@Url.Action("About", "Home")" class="btn-outline-accent">Learn More</a>
+    </div>
 </div>
 
+<!-- Stats bar -->
+<div class="stats-bar">
+    <div class="stat-item">
+        <span class="stat-number">12+</span>
+        <span class="stat-label">Years of Experience</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number">3,500+</span>
+        <span class="stat-label">Students Trained</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number">96%</span>
+        <span class="stat-label">First-Time Pass Rate</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number">15</span>
+        <span class="stat-label">Qualified Instructors</span>
+    </div>
+</div>
+
+<!-- About / intro section -->
 <div class="about-section">
     <h2>About Us</h2>
     <p>
-        Sni's Driving School has been helping learners become safe, confident drivers.
-        We offer flexible lesson bookings, experienced instructors, and a simple online
-        system to manage your lessons — whether you're a student booking a lesson,
-        an instructor managing your schedule, or staff handling registrations.
+        Sni's Driving School has been helping learners become safe, confident drivers since 2013.
+        We offer flexible lesson bookings, patient and experienced instructors, and a simple online
+        system to manage your lessons — whether you're a student booking a lesson, an instructor
+        managing your schedule, or staff handling registrations. Our goal is simple: get you road-ready,
+        safely and stress-free.
     </p>
+</div>
+
+<!-- Courses / services -->
+<div class="section-block">
+    <h2 class="section-title">Our Courses</h2>
+    <p class="section-subtitle">Pick the package that fits where you are on your driving journey.</p>
+
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="feature-icon">🚗</div>
+            <h3>Beginner Package</h3>
+            <p>10 hour-long lessons covering the basics — vehicle control, road rules, parking, and
+                building confidence behind the wheel from day one.</p>
+            <span class="feature-price">R 3,200</span>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🛣️</div>
+            <h3>Intermediate Package</h3>
+            <p>8 lessons focused on real-world driving: highways, busy intersections, night driving,
+                and hazard perception.</p>
+            <span class="feature-price">R 2,600</span>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🎓</div>
+            <h3>Test Preparation</h3>
+            <p>5 lessons designed around your local test route, mock assessments, and last-minute
+                confidence coaching before test day.</p>
+            <span class="feature-price">R 1,800</span>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Refresher Course</h3>
+            <p>Already licensed but haven't driven in a while? A short course to rebuild confidence
+                and brush up on the rules of the road.</p>
+            <span class="feature-price">R 1,200</span>
+        </div>
+    </div>
+</div>
+
+<!-- Why choose us -->
+<div class="section-block alt-bg">
+    <h2 class="section-title">Why Choose Sni's Driving School</h2>
+    <div class="why-grid">
+        <div class="why-item">
+            <h4>Patient, Qualified Instructors</h4>
+            <p>Every instructor is fully licensed and trained to teach learners at every skill level, from total beginners to nervous returning drivers.</p>
+        </div>
+        <div class="why-item">
+            <h4>Flexible Scheduling</h4>
+            <p>Book, reschedule, or track your lessons online — lessons available on weekdays, evenings, and weekends to fit around work or school.</p>
+        </div>
+        <div class="why-item">
+            <h4>Modern, Dual-Control Vehicles</h4>
+            <p>Learn in well-maintained, dual-control vehicles fitted with safety features, so instructors can step in if needed.</p>
+        </div>
+        <div class="why-item">
+            <h4>High Pass Rate</h4>
+            <p>Our structured lesson plans and mock tests mean the majority of our students pass their driving test on the first attempt.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Image + CTA section -->
+<div class="cta-image-section">
+    <div class="cta-image-overlay">
+        <h2>Ready to hit the road?</h2>
+        <p>Your first step to a driver's licence starts with a single lesson. Book online in minutes.</p>
+        <a href="@Url.Action("Login", "Account")" class="btn-accent">Get Started</a>
+    </div>
+</div>
+
+<!-- Testimonials -->
+<div class="section-block">
+    <h2 class="section-title">What Our Students Say</h2>
+    <div class="testimonial-grid">
+        <div class="testimonial-card">
+            <p class="testimonial-text">"I was so nervous about learning to drive, but my instructor was incredibly patient. Passed my test on the first try!"</p>
+            <p class="testimonial-author">— Thandiwe M.</p>
+        </div>
+        <div class="testimonial-card">
+            <p class="testimonial-text">"Booking lessons online was so easy, and the instructors actually work around your schedule. Highly recommend."</p>
+            <p class="testimonial-author">— Sipho N.</p>
+        </div>
+        <div class="testimonial-card">
+            <p class="testimonial-text">"Best decision I made was going with Sni's. The mock tests before my exam made all the difference."</p>
+            <p class="testimonial-author">— Aisha K.</p>
+        </div>
+    </div>
 </div>
